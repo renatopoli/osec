@@ -1,50 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-</head>
-<body>
-
-<div class="container">
-  <h2>Justified Tabs/Pills</h2>
-  <p>To justify tabs/pills (equal width), use the .nav-justified class:</p>
-  <ul class="nav nav-pills nav-justified">
-    <li class="nav-item">
-      <a class="nav-link active" href="#">Active</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link disabled" href="#">Disabled</a>
-    </li>
-  </ul><br>
-
-  <p>Justified tabs:</p>
-  <ul class="nav nav-tabs nav-justified">
-    <li class="nav-item">
-      <a class="nav-link active" href="#">Active</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link disabled" href="#">Disabled</a>
-    </li>
-  </ul>
-</div>
-
-</body>
-</html>
+	
+	<head>
+		<title>OSEC</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+		
+	</head>
+	
+	<body>
+		<br>
+		<div class="container">
+			<div style="background-image:url('bg.png');">
+				<img src="topo.png" class="center">
+			</div>
+			<br>
+			<br>
+			<br>
+			<!-- NAV -->
+			<ul class="nav nav-pills nav-justified" role="tablist">
+				<li class="nav-item"> <a class="nav-link active" data-toggle="pill" href="#home">Início</a> </li>
+				<li class="nav-item"> <a class="nav-link" data-toggle="pill" href="#menu1">Institucional</a> </li>
+				<li class="nav-item"> <a class="nav-link" data-toggle="pill" href="#menu2">Unidades</a> </li>
+				<li class="nav-item"> <a class="nav-link" data-toggle="pill" href="#menu3">Especialidades e serviços</a> </li>
+				<li class="nav-item"> <a class="nav-link" data-toggle="pill" href="#menu5">Fotos</a> </li>
+				<li class="nav-item"> <a class="nav-link" data-toggle="pill" href="#menu6">Fale Conosco</a> </li>
+			</ul>
+			<hr>
+			<!-- CONTENT -->
+			<div class="tab-content">
+				<!-- ABA INICIO -->
+				<div id="home" class="container tab-pane active">
+					<br>
+					<h3 class="text-primary">Início</h3>
+					<br>
+					<p> O Complexo de Saúde Dr. Wladimir Arruda conta com especialidades para atendimento ambulatorial. Uma equipe de profissionais altamente qualificados, em um ambiente moderno para atender com excelência e conforto. </p>
+				</div>
+				<!-- FIM ABA INICIO -->
+				<!-- ABA INSTITUCIONAL -->
+				<div id="menu1" class="container tab-pane fade">
+					<br>
+					<h3 class="text-primary">Institucional</h3>
+					<br> <strong>Visão</strong>
+					<br>
+					Ser reconhecida pela excelência de sua participação na assistência à saúde pública, contribuindo para a atividade de saúde, atuando em atendimentos mediante gratuidade.
+					<br>
+					<br>
+					<strong>Missão</strong>
+					<br>
+					Desenvolver assistência à saúde com qualidade, respeito e determinação, buscando atingir o maior número de pessoas na região sul.
+					<br>
+					<br>
+					<strong>Valores</strong>
+					<br>
+					<ul>
+						<li>Competência;</li>
+						<li>Confiabilidade;</li>
+						<li>Comprometimento;</li>
+						<li>Respeito à pluralidade de ideias e à liberdade de expressão;</li>
+						<li>Transparência nas relações profissionais;</li>
+						<li>Preservação de princípios éticos, morais e cristãos.</li>
+					</ul>
+				</div>
+				<!-- FIM ABA INSTITUCIONAL -->
+				<!-- ABA UNIDADES -->
+				<div id="menu2" class="container tab-pane fade">
+					<br>
+					<h3 class="text-primary">UNIDADES</h3>
+					<br>
+					<p>1- Complexo de Saúde Wladimir Arruda - Unidade I<br>Rua Cassio de Campos Nogueira, 2032 - Jd das Embuias</p>
+					<p><strong>Especialidades e Serviços</strong></p>
+					<ul>
+						<li>Clinico Geral</li>
+						<li>Ginecologia e Obstetrícia</li>      
+						<li>Geriatria</li>
+						<li>Neurologia</li>
+						<li>Cardiologia</li>
+						<li>Reumatologia</li>
+						<li>Dermatologia</li>
+						<li>Nefrologia</li>
+						<li>ECG</li>
+					</ul>
+					<br>
+					<p>2- Complexo de Saúde Wladimir Arruda - Unidade II<br>Rua Alfonso de Albuquerque, 500- Jd da Embuias</p>
+					<p><strong>Especialidades e Serviços</strong></p>
+					<ul>
+						<li>Pediatria</li>
+						<li>Psiquiatria </li>      
+						<li>Ortopedia</li>
+						</ul><ul>
+					</div>
+					<!-- FIM ABA UNIDADES -->
+					<!-- ABA ESPECIALIDADES -->
+					<div id="menu3" class="container tab-pane fade">
+						<br>
+						<h3 class="text-primary">Especialidades e serviços</h3>
+						<br>
+						<ul>
+							<li>Clinico Geral</li>
+							<li>Ginecologia e Obstetrícia</li>
+							<li>Geriatria</li>
+							<li>Neurologia</li>
+							<li>Cardiologia</li>
+							<li>Reumatologia</li>
+							<li>Dermatologia</li>
+							<li>Nefrologia</li>
+							<li>ECG</li>
+						</u>
+					</div>
+					<!-- FIM ABA ESPECIALIDADES -->
+					
+					<!-- ABA FOTOS -->
+					<div id="menu5" class="container tab-pane fade">
+						<br>
+						<h3 class="text-primary">Fotos</h3>
+						<br>
+						<div class="row" id="fotos">
+							
+						</div>
+					</div>
+					<!-- FIM ABA FOTOS -->
+					<!-- ABA FALE CONOSCO -->
+					<div id="menu6" class="container tab-pane fade">
+						<br>
+						<h3 class="text-primary">Fale Conosco</h3>
+						<br> Rua Cássio de Campos Nogueira, 2031
+						<br> Jardim das Imbuias
+						<br> São Paulo - SP
+						<br> CEP 04829-310
+						<br>
+						<br> Tel: (11) 2141-8973 / 2141-8595
+						<br>
+						Email: <a href="mailto:institucional@osec.br">institucional@osec.br</a>
+					</div>
+					<!-- FIM ABA FALE CONOSCO -->
+					
+				</div>
+			</div>
+			<div id="modal_fotos"></div>
+			
+			<script>
+				/* ========= GALERIA DE FOTOS ============ */
+				var elemento = document.getElementById('fotos');
+				
+				// Variável para armazenar o conteúdo
+				var conteudo = '';
+				
+				// Loop
+				for (var i = 1; i <= 51; i++) {
+					// Adiciona o conteúdo ao acumulador
+					conteudo += '<div class="col-md-2"><img src="fotos/foto_'+i+'.jpeg" class="img-thumbnail" data-toggle="modal" data-target="#foto'+i+'" style="cursor:pointer"></div>';
+				}
+				
+				// Define o conteúdo no elemento usando innerHTML
+				elemento.innerHTML = conteudo;
+				
+				
+				/* ========= MODAL DAS FOTOS ============ */
+				var modal = document.getElementById('modal_fotos');
+				
+				// Variável para armazenar o conteúdo
+				var content_modal = '';
+				
+				// Loop
+				for (var i = 1; i <= 51; i++) {
+					// Adiciona o conteúdo ao acumulador
+					content_modal += '<div class="modal" id="foto'+i+'"><div class="modal-dialog modal-xl"><div class="modal-content"><!-- Modal Header --><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button></div><!-- Modal body --><div class="modal-body"><img src="fotos/foto_'+i+'.jpeg" style="width:100%;"></div><!-- Modal footer --><div class="modal-footer"><button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button></div></div></div></div>';
+				}
+				
+				// Define o conteúdo no elemento usando innerHTML
+				modal.innerHTML = content_modal;
+				
+				
+				
+				
+			</script>
+			
+		</body>
+		
+	</html>			
