@@ -12,8 +12,8 @@
 		<link rel="icon" href="logo.png" type="image/png">
 		<link rel="shortcut icon" href="logo.png" type="image/png">
 		<style>
-		.nav-link{color:#fff;}
-		.navbar nav-pills{padding-right: 1.9rem;padding-left: 2.7rem;}
+			.nav-link{color:#fff;}
+			.navbar nav-pills{padding-right: 1.9rem;padding-left: 2.7rem;}
 		</style>
 	</head>
 	
@@ -106,14 +106,17 @@
 					<br>
 					<ul>
 						<li>Clinico Geral</li>
-						<li>Ginecologia e Obstetrícia</li>
+						<li>ECG</li>
+						<li>Ginecologia e Obstetr&iacute;cia</li>
 						<li>Geriatria</li>
 						<li>Neurologia</li>
 						<li>Cardiologia</li>
 						<li>Reumatologia</li>
 						<li>Dermatologia</li>
+						<li>Pediatria</li>
+						<li>Psiquiatria</li>
 						<li>Nefrologia</li>
-						<li>ECG</li>
+						<li>Ortopedia</li>
 					</ul>
 				</div>
 				<div id="fotos" class="container tab-pane fade"><br>
@@ -124,13 +127,13 @@
 				<div id="faleconosco" class="container tab-pane fade"><br>
 					<h3 class="text-primary">FALE CONOSCO</h3>
 					<br> Rua Cássio de Campos Nogueira, 2031
-						<br> Jardim das Imbuias
-						<br> São Paulo - SP
-						<br> CEP 04829-310
-						<br>
-						<br> Tel: (11) 2141-8973 / 2141-8595
-						<br>
-						Email: <a href="mailto:institucional@osec.br">institucional@osec.br</a>
+					<br> Jardim das Imbuias
+					<br> São Paulo - SP
+					<br> CEP 04829-310
+					<br>
+					<br> Tel: (11) 2141-8973 / 2141-8595
+					<br>
+					Email: <a href="mailto:institucional@osec.br">institucional@osec.br</a>
 				</div>
 				
 			</div><!-- end tab content -->
@@ -138,37 +141,37 @@
 		
 		<div id="modal_fotos"></div>
 		<script>
-				/* ========= GALERIA DE FOTOS ============ */
-				var elemento = document.getElementById('foto');
-				
-				// Variável para armazenar o conteúdo
-				var conteudo = '';
-				
-				// Loop
-				for (var i = 1; i <= 51; i++) {
-					// Adiciona o conteúdo ao acumulador
-					conteudo += '<div class="col-md-2"><img src="fotos/foto_'+i+'.jpeg" class="img-thumbnail" data-toggle="modal" data-target="#foto'+i+'" style="cursor:pointer"></div>';
-				}
-				
-				// Define o conteúdo no elemento usando innerHTML
-				elemento.innerHTML = conteudo;
-				
-				
-				/* ========= MODAL DAS FOTOS ============ */
-				var modal = document.getElementById('modal_fotos');
-				
-				// Variável para armazenar o conteúdo
-				var content_modal = '';
-				
-				// Loop
-				for (var i = 1; i <= 51; i++) {
-					// Adiciona o conteúdo ao acumulador
-					content_modal += '<div class="modal" id="foto'+i+'"><div class="modal-dialog modal-xl"><div class="modal-content"><!-- Modal Header --><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button></div><!-- Modal body --><div class="modal-body"><img src="fotos/foto_'+i+'.jpeg" style="width:100%;"></div><!-- Modal footer --><div class="modal-footer"><button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button></div></div></div></div>';
-				}
-				
-				// Define o conteúdo no elemento usando innerHTML
-				modal.innerHTML = content_modal;
-			</script>
+			/* ========= GALERIA DE FOTOS ============ */
+			var elemento = document.getElementById('foto');
+			
+			// Variável para armazenar o conteúdo
+			var conteudo = '';
+			
+			// Loop
+			for (var i = 1; i <= 51; i++) {
+				// Adiciona o conteúdo ao acumulador
+				conteudo += '<div class="col-md-2"><img src="fotos/foto_'+i+'.jpeg" class="img-thumbnail" data-toggle="modal" data-target="#foto'+i+'" style="cursor:pointer"></div>';
+			}
+			
+			// Define o conteúdo no elemento usando innerHTML
+			elemento.innerHTML = conteudo;
+			
+			
+			/* ========= MODAL DAS FOTOS ============ */
+			var modal = document.getElementById('modal_fotos');
+			
+			// Variável para armazenar o conteúdo
+			var content_modal = '';
+			
+			// Loop
+			for (var i = 1; i <= 51; i++) {
+				// Adiciona o conteúdo ao acumulador
+				content_modal += '<div class="modal" id="foto'+i+'"><div class="modal-dialog modal-xl"><div class="modal-content"><!-- Modal Header --><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button></div><!-- Modal body --><div class="modal-body"><img src="fotos/foto_'+i+'.jpeg" style="width:100%;"></div><!-- Modal footer --><div class="modal-footer"><button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button></div></div></div></div>';
+			}
+			
+			// Define o conteúdo no elemento usando innerHTML
+			modal.innerHTML = content_modal;
+		</script>
 	</body>
 	
 </html>										
