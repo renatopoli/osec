@@ -12,51 +12,49 @@
 		<link rel="icon" href="logo.png" type="image/png">
 		<link rel="shortcut icon" href="logo.png" type="image/png">
 		<style>
-			.navbar-dark .navbar-nav .nav-link{color:#fff;text-transform:uppercase;font-size:1.2rem;font-weight:normal;}
-			.navbar-expand-sm .navbar-nav .nav-link {padding-right: 1.9rem;padding-left: 2.7rem;}
+		.nav-link{color:#fff;}
+		.navbar nav-pills{padding-right: 1.9rem;padding-left: 2.7rem;}
 		</style>
 	</head>
 	
 	<body>
+		
 		<nav class="navbar navbar-expand-sm bg-primary navbar-dark" style="background:#1885FF !important;">
-
-			<a class="navbar-brand" href="#"><img src="logo.png"></a>
 			
-			<!-- Links -->
-			<ul class="navbar-nav">
+			<a class="navbar-brand" href="#"><img src="logo.png" style="max-width:200px"></a>
+			<ul class="nav nav-pills" role="tablist">
 				<li class="nav-item">
-					<a class="nav-link"  data-toggle="pill" href="#home">Início</a>
+					<a class="nav-link active" data-toggle="pill" href="#home">INÍCIO</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" data-toggle="pill" href="#institucional">Institucional</a>
+					<a class="nav-link" data-toggle="pill" href="#institucional">INSTITUCIONAL</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" data-toggle="pill" href="#faleconosco">Fale conosco</a>
+					<a class="nav-link" data-toggle="pill" href="#unidades">UNIDADES</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" data-toggle="pill" href="#especialidades">Especialidades</a>
+					<a class="nav-link" data-toggle="pill" href="#especialidades">ESPECIALIDADES</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" data-toggle="pill" href="#listaservicos">Lista de serviços</a>
+					<a class="nav-link" data-toggle="pill" href="#fotos">FOTOS</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="pill" href="#faleconosco">FALE CONOSCO</a>
 				</li>
 			</ul>
 		</nav>
-		<div class="container">
+		<div class="container-fluid">
 			
-			<!-- CONTENT -->
+			
+			<!-- Tab panes -->
 			<div class="tab-content">
-				<!-- ABA INICIO -->
-				<div id="home" class="container tab-pane active">
-					<br>
-					<h3 class="text-primary">Início</h3>
+				<div id="home" class="container tab-pane active"><br>
+					<h3 class="text-primary">INÍCIO</h3>
 					<br>
 					<p> O Complexo de Saúde Dr. Wladimir Arruda conta com especialidades para atendimento ambulatorial. Uma equipe de profissionais altamente qualificados, em um ambiente moderno para atender com excelência e conforto. </p>
 				</div>
-				<!-- FIM ABA INICIO -->
-				<!-- ABA INSTITUCIONAL -->
-				<div id="institucional" class="container tab-pane fade">
-					<br>
-					<h3 class="text-primary">Institucional</h3>
+				<div id="institucional" class="container tab-pane fade"><br>
+					<h3 class="text-primary">INSTITUCIONAL</h3>
 					<br> <strong>Visão</strong>
 					<br>
 					Ser reconhecida pela excelência de sua participação na assistência à saúde pública, contribuindo para a atividade de saúde, atuando em atendimentos mediante gratuidade.
@@ -78,10 +76,7 @@
 						<li>Preservação de princípios éticos, morais e cristãos.</li>
 					</ul>
 				</div>
-				<!-- FIM ABA INSTITUCIONAL -->
-				<!-- ABA UNIDADES -->
-				<div id="menu2" class="container tab-pane fade">
-					<br>
+				<div id="unidades" class="container tab-pane fade"><br>
 					<h3 class="text-primary">UNIDADES</h3>
 					<br>
 					<p>1- Complexo de Saúde Wladimir Arruda - Unidade I<br>Rua Cassio de Campos Nogueira, 2032 - Jd das Embuias</p>
@@ -104,50 +99,31 @@
 						<li>Pediatria</li>
 						<li>Psiquiatria </li>      
 						<li>Ortopedia</li>
-						</ul><ul>
-					</div>
-					<!-- FIM ABA UNIDADES -->
-					<!-- ABA ESPECIALIDADES -->
-					<div id="especialidades" class="container tab-pane fade">
-						<br>
-						<h3 class="text-primary">Especialidades e serviços</h3>
-						<br>
-						<ul>
-							<li>Clinico Geral</li>
-							<li>Ginecologia e Obstetrícia</li>
-							<li>Geriatria</li>
-							<li>Neurologia</li>
-							<li>Cardiologia</li>
-							<li>Reumatologia</li>
-							<li>Dermatologia</li>
-							<li>Nefrologia</li>
-							<li>ECG</li>
-						</u>
-					</div>
-					<!-- FIM ABA ESPECIALIDADES -->
-					
-					<!-- ABA ESPECIALIDADES -->
-					<div id="listaservicos" class="container tab-pane fade">
-						<br>
-						<h3 class="text-primary">Serviços</h3>
-						<br>
-						<p>Lorem...</p>
-					</div>
-					<!-- FIM ABA ESPECIALIDADES -->
-					
-					<!-- ABA FOTOS -->
-					<div id="menu5" class="container tab-pane fade">
-						<br>
-						<h3 class="text-primary">Fotos</h3>
-						<br>
-						<div class="row" id="fotos"></div>
-					</div>
-					<!-- FIM ABA FOTOS -->
-					<!-- ABA FALE CONOSCO -->
-					<div id="faleconosco" class="container tab-pane fade">
-						<br>
-						<h3 class="text-primary">Fale Conosco</h3>
-						<br> Rua Cássio de Campos Nogueira, 2031
+					</ul>
+				</div>
+				<div id="especialidades" class="container tab-pane fade"><br>
+					<h3 class="text-primary">Especialidades e serviços</h3>
+					<br>
+					<ul>
+						<li>Clinico Geral</li>
+						<li>Ginecologia e Obstetrícia</li>
+						<li>Geriatria</li>
+						<li>Neurologia</li>
+						<li>Cardiologia</li>
+						<li>Reumatologia</li>
+						<li>Dermatologia</li>
+						<li>Nefrologia</li>
+						<li>ECG</li>
+					</ul>
+				</div>
+				<div id="fotos" class="container tab-pane fade"><br>
+					<h3 class="text-primary">FOTOS</h3>
+					<div class="row" id="foto"></div>
+				</div>
+				
+				<div id="faleconosco" class="container tab-pane fade"><br>
+					<h3 class="text-primary">FALE CONOSCO</h3>
+					<br> Rua Cássio de Campos Nogueira, 2031
 						<br> Jardim das Imbuias
 						<br> São Paulo - SP
 						<br> CEP 04829-310
@@ -155,16 +131,15 @@
 						<br> Tel: (11) 2141-8973 / 2141-8595
 						<br>
 						Email: <a href="mailto:institucional@osec.br">institucional@osec.br</a>
-					</div>
-					<!-- FIM ABA FALE CONOSCO -->
-					
 				</div>
-			</div>
-			<div id="modal_fotos"></div>
-			
-			<script>
+				
+			</div><!-- end tab content -->
+		</div>
+		
+		<div id="modal_fotos"></div>
+		<script>
 				/* ========= GALERIA DE FOTOS ============ */
-				var elemento = document.getElementById('fotos');
+				var elemento = document.getElementById('foto');
 				
 				// Variável para armazenar o conteúdo
 				var conteudo = '';
@@ -194,10 +169,6 @@
 				// Define o conteúdo no elemento usando innerHTML
 				modal.innerHTML = content_modal;
 			</script>
-			
-			
-			
-			
-		</body>
-		
-	</html>						
+	</body>
+	
+</html>										
