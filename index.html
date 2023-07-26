@@ -48,6 +48,7 @@
 				<div id="institucional" class="container tab-pane active"><br>
 					<h3 class="text-primary">INSTITUCIONAL</h3>
 					<br>
+					<img src="fotos/foto_28.jpeg" style="max-width:420px;float: left;margin-right: 20px;margin-bottom: 20px;">
 					<p> O Complexo de Saúde Dr. Wladimir Arruda conta com especialidades para atendimento ambulatorial. Uma equipe de profissionais altamente qualificados, em um ambiente moderno para atender com excelência e conforto. </p>
 					<br> <strong>Visão</strong>
 					<br>
@@ -141,10 +142,14 @@
 			// Variável para armazenar o conteúdo
 			var conteudo = '';
 			
+			var imagensEscondidas = [1,2,3,7,17,30,33,39,42,44,45,47];
+			
 			// Loop
 			for (var i = 1; i <= 51; i++) {
-				// Adiciona o conteúdo ao acumulador
-				conteudo += '<div class="col-md-2"><img src="fotos/foto_'+i+'.jpeg" class="img-thumbnail" data-toggle="modal" data-target="#foto'+i+'" style="cursor:pointer"></div>';
+				if (!imagensEscondidas.includes(i)) {
+					// Adiciona o conteúdo ao acumulador
+					conteudo += '<div class="col-md-3"><img src="fotos/foto_'+i+'.jpeg" class="img-thumbnail" data-toggle="modal" data-target="#foto'+i+'" style="cursor:pointer">foto '+i+'</div>';
+				}
 			}
 			
 			// Define o conteúdo no elemento usando innerHTML
