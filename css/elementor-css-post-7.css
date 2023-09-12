@@ -7,7 +7,7 @@
 	font-style: normal;
 	font-weight: normal;
 	font-display: auto;
-	src: url(./../fonts/Gotham-Book.woff) format('woff');
+	src: url('http://localhost/osec/wp-content/uploads/2023/09/Gotham-Book.woff') format('woff');
 }
 /* End Custom Fonts CSS */
 /* Start Custom Fonts CSS */@font-face {
@@ -15,7 +15,7 @@
 	font-style: normal;
 	font-weight: bold;
 	font-display: auto;
-	src: url(./../fonts/Gotham-Black.woff) format('woff');
+	src: url('http://localhost/osec/wp-content/uploads/2023/09/Gotham-Black.woff') format('woff');
 }
 /* End Custom Fonts CSS */
 /* Start Custom Fonts CSS */@font-face {
@@ -23,6 +23,6 @@
 	font-style: normal;
 	font-weight: normal;
 	font-display: auto;
-	src: url(./../fonts/Gotham-Medium.woff) format('woff');
+	src: url('http://localhost/osec/wp-content/uploads/2023/09/Gotham-Medium.woff') format('woff');
 }
 /* End Custom Fonts CSS */
