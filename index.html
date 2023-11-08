@@ -19,6 +19,8 @@
         <link rel="stylesheet" id="elementor-icons-fa-solid-css" href="./css/elementor-assets-lib-font-awesome-css-solid.min.css" type="text/css" media="all" />
         <link rel="stylesheet" href="./wp-content/plugins/elementor-pro/assets/css/widget-nav-menu.min.css" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+		
+		<script type="text/javascript" src="./js/jquery-jquery.min.js" id="jquery-core-js"></script>
 	</head>
     <body class="home page-template page-template-elementor_canvas page page-id-7 elementor-default elementor-template-canvas elementor-kit-6 elementor-page elementor-page-7">
         <div data-elementor-type="wp-page" data-elementor-id="7" class="elementor elementor-7" data-elementor-post-type="page">
@@ -211,29 +213,23 @@
                         data-widget_type="form.default"
                         >
                             <div class="elementor-widget-container">
-                                <form class="elementor-form" method="post" name="New Form" id="form">
-                                    <input type="hidden" name="post_id" value="7" /> <input type="hidden" name="form_id" value="415c293" /> <input type="hidden" name="referer_title" value="" />
-                                    <input type="hidden" name="queried_id" value="7" />
+                                <form class="elementor-form" method="post" id="form_contato">
                                     <div class="elementor-form-fields-wrapper elementor-labels-">
                                         <div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-100">
                                             <label for="form-field-name" class="elementor-field-label elementor-screen-only"> Nome </label>
-                                            <input size="1" type="text" name="form_fields[name]" id="form-field-name" class="elementor-field elementor-size-sm elementor-field-textual" placeholder="Nome" />
+                                            <input size="1" type="text" name="nome" id="nome" class="elementor-field elementor-size-sm elementor-field-textual" placeholder="Nome" />
 										</div>
                                         <div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_2f1d457 elementor-col-100">
                                             <label for="form-field-field_2f1d457" class="elementor-field-label elementor-screen-only"> E-mail </label>
-                                            <input size="1" type="email" name="email" id="form-field-field_2f1d457" class="elementor-field elementor-size-sm elementor-field-textual" placeholder="E-mail" />
+                                            <input size="1" type="email" name="email" id="email" class="elementor-field elementor-size-sm elementor-field-textual" placeholder="E-mail" />
 										</div>
                                         <div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_8362465 elementor-col-100">
                                             <label for="form-field-field_8362465" class="elementor-field-label elementor-screen-only"> Telefone </label>
-                                            <input size="1" type="text" name="telefone" id="form-field-field_8362465" class="elementor-field elementor-size-sm elementor-field-textual" placeholder="Telefone" />
-										</div>
-                                        <div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_90b9b67 elementor-col-100">
-                                            <label for="form-field-field_90b9b67" class="elementor-field-label elementor-screen-only"> Unidade </label>
-                                            <!--select name="unidade" id="form-field-field_90b9b67" class="elementor-field elementor-size-sm elementor-field-textual"><option value="Unidade Wladimir Arruda">Unidade Wladimir Arruda</option><option value="Hospital Padre Bento">Hospital Padre Bento </option></select-->
+                                            <input size="1" type="text" name="fone" id="fone" class="elementor-field elementor-size-sm elementor-field-textual" placeholder="Telefone" />
 										</div>
                                         <div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-field_42ef27b elementor-col-100">
-                                            <label for="form-field-field_42ef27b" class="elementor-field-label elementor-screen-only"> Nome </label>
-                                            <input size="1" type="text" name="form_fields[field_42ef27b]" id="form-field-field_42ef27b" class="elementor-field elementor-size-sm elementor-field-textual" placeholder="Telefone" />
+                                            <label for="form-field-field_42ef27b" class="elementor-field-label elementor-screen-only"> Mensagem </label>
+                                            <textarea class="elementor-field elementor-size-sm elementor-field-textual" name="mensagem" id="mensagem" placeholder="Mensagem" rows="5"></textarea>
 										</div>
                                         <div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons">
                                             <button type="submit" class="elementor-button elementor-size-sm">
@@ -283,7 +279,55 @@
 				</div>
 			</div>
 		</div>
-        <script type="text/javascript" src="./js/jquery-jquery.min.js" id="jquery-core-js"></script>
+		<!-- controles do form -->
+		<!-- Adicione um div para o modal -->
+		<div id="myModal" class="modal">
+			<div class="modal-content">
+				<span class="close" id="closeModal">&times;</span>
+				<p id="successMessage">Enviado com sucesso!</p>
+			</div>
+		</div>
+		
+		<script>
+			jQuery(document).ready(function() {
+				jQuery("#form_contato").submit(function(event) {
+					event.preventDefault();
+					
+					// Mapeie os dados do formulário
+					var formData = {
+						nome: jQuery("#nome").val(),
+						email: jQuery("#email").val(),
+						fone: jQuery("#fone").val(),
+						mensagem: jQuery("#mensagem").val(),
+					};
+					
+					jQuery.ajax({
+						type: "POST",
+						url: "https://api.osec.br/contato",
+						data: formData,
+						success: function(response) {
+							console.log("Dados enviados com sucesso!");
+							//alert("Obrigado! Seus dados foram enviados com sucesso.");
+							jQuery('#myModal').modal('show');
+						},
+						error: function(jqXHR, textStatus, errorThrown) {
+							var errorMessage = 
+							"Status da resposta: " + jqXHR.status + "\n" +
+							"Texto do status: " + textStatus + "\n" +
+							"Erro lançado: " + errorThrown + "\n" +
+							"Resposta completa: " + jqXHR.responseText;
+							//alert(errorMessage);
+							jQuery('#myModal').modal('show');
+						}
+					});
+				});
+			});
+			
+			
+		</script>
+		
+		<!-- fim controles do form -->
+        
         <script type="text/javascript" src="./js/jquery-jquery-migrate.min.js" id="jquery-migrate-js"></script>
         <script type="text/javascript" src="./js/elementor-pro-assets-lib-smartmenus-jquery.smartmenus.min.js" id="smartmenus-js"></script>
         <script type="text/javascript" src="./js/b1k-imagesloaded.min.js" id="imagesloaded-js"></script>
@@ -401,5 +445,6 @@
 		</script>
         <script type="text/javascript" src="./js/elementor-assets-js-frontend.min.js" id="elementor-frontend-js"></script>
         <script type="text/javascript" src="./js/elementor-pro-assets-js-elements-handlers.min.js" id="pro-elements-handlers-js"></script>
+		
 	</body>
 </html>
