@@ -88,8 +88,8 @@
 	display: inline-block;
 }
 
-#frase_formulario, #form {display:none}
-#frase_provisoria {width:100%;padding-right: 2%;}
+/* #frase_formulario, #form {display:none !important;} */
+#frase_provisoria {width:100%;padding-right: 2%;display: none;}
 
 /*FORM*/
 
